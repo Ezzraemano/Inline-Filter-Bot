@@ -13,86 +13,79 @@ from InlineBot import (
 if CUSTOM_START_MESSAGE:
     START_MESSAGE = CUSTOM_START_MESSAGE
 else:
-    START_MESSAGE = """<b>Hello {mention},
-
-I am an Inline Saver Bot, you can save inline filters and It can be use in any of your chats easily, Click help for more details</b> 
+    START_MESSAGE = """<b>PLUGIN TAMBAHAN UNI</b> 
 """
 
 HELP_MESSAGE = f"""<b><u>Main Available Commands</u></b>
 
-○ <b>/{FILTER_COMMAND.lower()}</b> <i>[keyword] [message or reply to message]</i>
-    <i>Add an Inline filter, you can use MarkDown for formatting</i>
+○ <b>/{FILTER_COMMAND.lower()}</b> <i>[kata kunci] [pesan atau balas pesan]</i>
+     <i>Tambahkan filter Inline, Anda dapat menggunakan MarkDown untuk pemformatan</i>
     
-○ <b>/{DELETE_COMMAND.lower()}</b> <i>[keyword]</i>
-    <i>Delete existing Filter</i>
+○ <b>/{DELETE_COMMAND.lower()}</b> <i>[kata kunci]</i>
+     <i>Hapus Filter yang ada</i>
     
-○ <b>/filters</b>
-    <i>To see the filters</i>
+○ <b>/filter</b>
+     <i>Untuk melihat filter</i>
     
-○ <b>/export</b>
-    <i>Export a Backup file of filters, this can be import by others</i>
+○ <b>/ekspor</b>
+     <i>Ekspor file Cadangan filter, ini dapat diimpor oleh orang lain</i>
     
 ○ <b>/stats</b>
-    <i>See the Bot's Statistics</i>
+     <i>Lihat Statistik Bot</i>
     
-○ <b>/broadcast</b> <i>[reply to any message]</i>
-    <i>Broadcast any Messages to Bot users</i>
+○ <b>/broadcast</b> <i>[membalas pesan apa pun]</i>
+     <i>Siarkan Pesan apa pun ke pengguna Bot</i>
     
-<b><u>Owner only Commands</u></b>
+<b><u>Perintah khusus pemilik</u></b>
 
-○ <b>/delall</b>
-    <i>Delete all of the filters</i>
+○ <b>/dell</b>
+     <i>Hapus semua filter</i>
     
-○ <b>/import</b> <i>[reply to an exported file]</i>
-    <i>Import filters from Backup file</i>
+○ <b>/import</b> <i>[membalas file yang diekspor]</i>
+     <i>Impor filter dari file Cadangan</i>
 """
 
 ABOUT_MESSAGE = f"""<b><u>ABOUT ME</u></b>
 
 <b>○ Maintained by : <a href='tg://user?id={OWNER_ID}'>This Person</a>
-○ Channel : <a href='https://t.me/CodeXBotz'>Code 𝕏 Botz</a>
-○ Support : <a href='https://t.me/CodeXBotzSupport'>Code 𝕏 Botz Support</a>
-○ Source Code : <a href='https://github.com/CodeXBotz/Inline-Filter-Bot'>Click here</a>
-○ Language : <a href='https://www.python.org/'>Python 3</a>
-○ Library : <a href='https://github.com/pyrogram/pyrogram'>Pyrogram Asyncio {__version__}</a></b>
 """
 
 MARKDOWN_HELP = """<b><u>Markdown Formatting</u></b>
 
-○ <b>Bold Words</b> :
-    format: <code>*Bold Text*</code>
-    show as: <b>Bold Text</b>
+○ <b>Kata Berani</b> :
+     format: <code>*Teks Tebal*</code>
+     tampilkan sebagai: <b>Teks Tebal</b>
     
-○ <b>Italic Text</b>
-    format: <code>_Italic Text_</code>
-    show as: <i>Italic Text</i>
+○ <b>Teks Miring</b>
+     format: <code>_Italic Text_</code>
+     tampilkan sebagai: <i>Teks Miring</i>
     
-○ <b>Code Words</b>
-    format: <code>`Code Text`</code>
-    show as: <code>Code Text</code>
+○ <b>Kode Kata</b>
+     format: <code>`Teks Kode`</code>
+     tampilkan sebagai: <code>Teks Kode</code>
     
-○ <b>Under Line</b>
-    format: <code>__UnderLine Text__</code>
-    show as: <u>UnderLine Text</u>
+○ <b>Garis Bawah</b>
+     format: <code>__UnderLine Text__</code>
+     tampilkan sebagai: <u>Teks Garis Bawah</u>
     
-○ <b>StrikeThrough</b>
-    format: <code>~StrikeThrough Text~</code>
-    show as: <s>StrikeThrough Text</s>
+○ <b>Coret Lewat</b>
+     format: <code>~Teks Coret~</code>
+     tampilkan sebagai: <s>Teks Coret</s>
     
 ○ <b>Hyper Link</b>
-    format: <code>[Text](https://t.me/CodeXBotz)</code>
-    show as: <a href='https://t.me/CodeXBotz'>Text</a>
+     format: <code>[Teks](https://t.me/amkeenanx)</code>
+     tampilkan sebagai: <a href='https://t.me/amkeenanx'>Teks</a>
     
-○ <b>Buttons</b>
-    <u>Url Button</u>:
-    <code>[Button Text](buttonurl:https://t.me/CoddeXBotz)</code>
-    <u>Alert Button</u>:
-    <code>[Button Text](buttonalert:Alert Text)</code>
-    <u>In Sameline</u>:
-    <code>[Button Text](buttonurl:https://t.me/CodeXBotz:same)</code></i>
+○ <b>Tombol</b>
+     <u>Tombol Url</u>:
+     <code>[Teks Tombol](buttonurl:https://t.me/amkeenanx)</code>
+     <u>Tombol Peringatan</u>:
+     <code>[Teks Tombol](buttonalert:Teks Peringatan)</code>
+     <u>Di Sameline</u>:
+     <code>[Teks Tombol](buttonurl:https://t.me/amkeenanx:text same line)</code></i>
 
-○ <b>Notes:</b>
-    <i>Keep every Buttons in Seperate line when formating</i>
-    <i>Your alert message text must be less than 200 characters, otherwise bot will ignore that button</i>
+○ <b>Catatan:</b>
+     <i>Simpan setiap Tombol di baris Terpisah saat memformat</i>
+     <i>Teks pesan lansiran Anda harus kurang dari 200 karakter, jika tidak, bot akan mengabaikan tombol itu</i>
 
-○ <b>Tip:</b> <i>You can add buttons for sticker and video note in /add command</i>"""
+○ <b>Kiat:</b> <i>Anda dapat menambahkan tombol untuk stiker dan catatan video di perintah /tambahkan</i>"""
