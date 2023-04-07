@@ -10,7 +10,7 @@ DB_URI = os.environ.get("DATABASE_URL", "")
 BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 TG_BOT_WORKERS = int(os.environ.get("BOT_WORKERS", '4'))
 DB_NAME = os.environ.get("DATABASE_NAME", "InlineFilterBot")
-thumb = os.environ.get('THUMBNAIL_URL', 'https://telegra.ph/file/516ca261de9ebe7f4ffe1.jpg')
+thumb = os.environ.get('THUMBNAIL_URL', 'https://telegra.ph/file/516ca261de9ebe7f84ffe1.jpg')
 OWNER_ID = int(os.environ.get('OWNER_ID'))
 CUSTOM_START_MESSAGE = os.environ.get('START_MESSAGE','')
 FILTER_COMMAND = os.environ.get('FILTER_COMMAND', 'add')
@@ -28,7 +28,7 @@ except ValueError:
 import logging
 from logging.handlers import RotatingFileHandler
 
-LOG_FILE_NAME = "codexbotz.txt"
+LOG_FILE_NAME = "unibot.txt"
 
 logging.basicConfig(
     level=logging.INFO,
